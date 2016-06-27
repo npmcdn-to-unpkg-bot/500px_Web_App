@@ -1,1 +1,8 @@
-<%= @photos %>
+<% @user = current_user %>
+<% @popular_photos = @user.popular_photos %>
+<ul>
+  <% @popular_photos.each do |photo_id| %>
+    <% photo = Photo.find_by("500px_id".to_sym => photo_id).photo_info %>
+    <li> <%= photo["name"] %> </li>
+    <% end %>
+</ul>
