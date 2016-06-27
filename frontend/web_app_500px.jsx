@@ -6,20 +6,16 @@ var React = require("react"),
     IndexRoute = ReactRouter.IndexRoute,
     hashHistory = ReactRouter.hashHistory;
 
-var ImageScreen = require('./components/imageScreen');
+var PhotoScreen = require('./components/photoScreen');
 
 var routes =(
-  <Route path="/" component={ImageScreen}>
+  <Route path="/" component={PhotoScreen}>
   </Route>
 );
 
 
 
 document.addEventListener("DOMContentLoaded", function(){
-  console.log("hello world");
-  console.log("hello world");
-  console.log("hello world");
-
   if(document.getElementById('content')){
     ReactDOM.render(<Router routes={routes} history={hashHistory} />,
       document.getElementById('content'));
