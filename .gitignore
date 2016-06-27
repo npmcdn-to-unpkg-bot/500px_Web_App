@@ -18,3 +18,7 @@
 
 # Ignore application configuration
 /config/application.yml
+
+#node_modules and bunde.js
+/node_modules
+/app/assets/javascripts/bundle.js*
